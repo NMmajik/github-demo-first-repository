@@ -2,9 +2,9 @@ public abstract class Beverage {
     String description = "Unknown Beverage";
     int size = 1;
 
-    public static final int VENTI = 1;
-    public static final int GRANDE = 2;
-    public static final int TALL = 3;
+    public static final int SIZE_S = 1;
+    public static final int SIZE_M = 2;
+    public static final int SIZE_L = 3;
 
     public String getDescription() {
         return description;
@@ -15,11 +15,11 @@ public abstract class Beverage {
     }
 
     public String getSizeName() {
-        if(getSize() == VENTI)
-            return "VENTI";
-        if(getSize() == GRANDE)
-            return "GRANDE";
-        return "TALL";
+        if(getSize() == SIZE_S)
+            return "S";
+        if(getSize() == SIZE_M)
+            return "M";
+        return "L";
     }
 
     public abstract double cost();

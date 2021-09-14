@@ -4,7 +4,12 @@ public class HouseBlend extends Beverage {
         description = "House Blend Coffee - size " + getSizeName();
     }
 
+    @Override
     public double cost() {
-        return .89;
+        if(getSize() == Beverage.SIZE_M)
+            return 2.89;
+        if(getSize() == Beverage.SIZE_L)
+            return 3.89;
+        return 1.89;
     }
 }
